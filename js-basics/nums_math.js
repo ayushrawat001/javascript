@@ -23,11 +23,11 @@ balance.toFixed(2) // Used to reduce or round of to specific decimal values
 //         b. In Ecommerce website
 
 const otherNumber = 23.8966
-    otherNumber.toPrecision(3) // Output - 23.9
-    otherNumber = 123.8966
-    otherNumber.toPrecision(3) // Output - 124    
-    otherNumber = 1123.8966
-    otherNumber.toPrecision(3) // Output - 1.12e+3 (exponential value)
+    // otherNumber.toPrecision(3) // Output - 23.9
+    // otherNumber = 123.8966
+    // otherNumber.toPrecision(3) // Output - 124    
+    // otherNumber = 1123.8966
+    // otherNumber.toPrecision(3) // Output - 1.12e+3 (exponential value)
 
 const hundreds = 1000000
     hundreds.toLocalString() // By default it converts into US standards

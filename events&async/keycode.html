@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keycode</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+
+        table{
+            padding: 5px;
+            border: 1px solid white;
+            text-align: center;
+        }
+
+        td,th{
+            border: 1px solid white ;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="keyPress">press a key and see the magic</h1>
+</body>
+
+<script>
+const h1 = document.querySelector('.keyPress');
+window.addEventListener('keydown',(e)=>
+    { h1.innerHTML = 
+        `<table>
+            <tr>
+                <th>key</th>
+                <th>keycode</th>
+                <th>code</th>
+            </tr>
+            <tr>
+                <td>${e.code==="Space"?"space" : e.key}  </td>    
+                <td>${e.keyCode}</td>
+                <td>${e.code}</td>
+            </tr>
+          </table>
+        `
+
+    })
+
+</script>
+</html>

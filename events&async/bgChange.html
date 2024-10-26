@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random background Change</title>
+    <style>
+        button{
+            height: 50px;
+            width: 100px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hey Coders click the start buttn for change the background color of the web page</h1>
+    <button class="button" id="start">start</button>
+    <button class="button" id="end">End</button>
+</body>
+
+<script>
+    const hex = '0123456789ABCDEF'
+    let color = '#'
+    
+
+    const start = document.querySelector('#start')
+
+    start.addEventListener('click',function()
+    {
+      interval= setInterval(changeBg,1000)   
+    },false)
+    changeBg = function()
+        {       let color = '#'
+                for (i=0;i<6;i++)
+            {
+                color+=hex[Math.round(Math.random()*15)]
+            }
+            console.log(color);
+        document.querySelector('body').style.backgroundColor = color
+    }
+   document.querySelector('#end').addEventListener('click',function()
+    {
+        clearInterval(interval)
+    })
+    
+</script>
+</html>

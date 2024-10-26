@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+    <style>
+        button{
+            height: 50px;
+            width: 100px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hey JS Learners</h1>
+    <button class="button" id="start">start</button>
+    <button class="button" id="end">End</button>
+</body>
+<script>
+   
+      const date = function(str)
+    {
+        console.log(str,Date.now());
+        
+    }
+   const start = document.querySelector('#start')
+   start.addEventListener('click',function()
+   {
+    interval = setInterval(date,1000,"ayush")
+   },false);
+  
+   const End = document.querySelector('#end')
+   end.addEventListener('click',function()
+   { console.log("stop button clicked");
+   
+    clearInterval(interval)
+   },false);
+  
+
+</script>
+
+
+</html>
